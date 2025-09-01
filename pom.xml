@@ -65,7 +65,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>7.20.1</version>
+            <version>7.27.2</version>
         </dependency>
 
         <!-- WebDriverManager: Gerencia automaticamente os drivers do Selenium -->
@@ -74,14 +74,6 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.7.0</version>
         </dependency>
-
-        <!-- Cucumber PicoContainer (versão mais recente): Pode causar conflito com a anterior -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <version>7.27.2</version>
-        </dependency>
-
         <!-- JUnit 4: Suporte a testes escritos na versão antiga do JUnit -->
         <dependency>
             <groupId>junit</groupId>
