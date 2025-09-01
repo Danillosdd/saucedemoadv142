@@ -1,2 +1,1 @@
-
-Lista de Exercícios/Lista 08 - Rest-assure/petstore142
+Lista de Exercícios/Lista 09 - Cucumber/saucedemoadv142
