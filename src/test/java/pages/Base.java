@@ -76,8 +76,8 @@ public class Base { // Classe base para manipulação do WebDriver
             WebElement btnOk = driver.findElement(By.xpath("//button[text()='OK']")); // Localiza botão OK do modal
             btnOk.click(); // Clica para fechar
             Thread.sleep(500); // Aguarda o modal sumir
-        } catch (Exception e) {
-            // Ignora se não encontrar o modal
+        } catch (org.openqa.selenium.NoSuchElementException | InterruptedException e) {
+            // Ignora se não encontrar o modal ou se a thread for interrompida
         }
     }
 }
