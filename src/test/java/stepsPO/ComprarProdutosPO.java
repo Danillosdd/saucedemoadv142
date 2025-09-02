@@ -45,21 +45,21 @@ public class ComprarProdutosPO {
 
         Assert.assertTrue(homePage.isLoggedIn());
         inventoryPage = new InventoryPage(driver);
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Quando("adiciono o produto {string} ao carrinho")
     public void adiciono_o_produto_ao_carrinho(String produto) {
         inventoryPage.addProductToCart(produto);
         Assert.assertTrue(inventoryPage.isProductAdded(produto));
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Quando("acesso o carrinho")
     public void acesso_o_carrinho() {
         inventoryPage.goToCart();
         cartPage = new CartPage(driver);
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Quando("prossigo para o checkout")
@@ -70,21 +70,21 @@ public class ComprarProdutosPO {
                 || cartPage.isProductInCart("Sauce Labs Fleece Jacket"));
         cartPage.checkout();
         checkoutPage = new CheckoutPage(driver);
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Quando("preencho os dados de compra com nome {string}, sobrenome {string} e CEP {string}")
     public void preencho_os_dados_de_compra(String nome, String sobrenome, String cep) {
         checkoutPage.fillInformation(nome, sobrenome, cep);
         Assert.assertTrue(checkoutPage.isOnOverviewPage());
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Quando("finalizo a compra")
     public void finalizo_a_compra() {
         checkoutPage.finish();
         confirmationPage = new ConfirmationPage(driver);
-        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     @Então("devo ver a mensagem de confirmação {string}")
