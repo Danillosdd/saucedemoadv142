@@ -14,6 +14,7 @@ public class InventoryPage {
     public void addProductToCart(String productName) {
         String xpath = String.format("//div[text()='%s']/ancestor::div[@class='inventory_item']//button", productName);
         driver.findElement(By.xpath(xpath)).click();
+        try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
     public boolean isProductAdded(String productName) {
